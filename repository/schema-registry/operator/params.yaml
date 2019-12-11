@@ -1,0 +1,5 @@
+apiVersion: kudo.dev/v1beta1
+parameters:
+  - name: HOST_NAME
+    description: "Host name used to generate absolute URLs in responses"
+    default: "localhost"
