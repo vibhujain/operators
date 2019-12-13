@@ -16,6 +16,8 @@ tasks:
     spec:
       resources:
         - service.yaml
+        - sr-pv.yaml
+        - deployment.yaml
 plans:
   deploy:
     strategy: serial
