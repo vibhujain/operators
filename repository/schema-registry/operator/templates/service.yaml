@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: schema-registry
+  name: {{ .Name }}
   namespace: {{ .Namespace }}
 spec:
   ports:
-  - port: 8081
+  - port: {{ .Params.SCHEMA_REGISTRY_PORT }}
   selector:
     app: schema-registry
   clusterIP: None

@@ -16,7 +16,6 @@ tasks:
     spec:
       resources:
         - service.yaml
-        - rp-pv.yaml
         - deployment.yaml
 plans:
   deploy:

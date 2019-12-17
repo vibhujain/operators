@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: rest-proxy
+  name: {{ .Name }}
   namespace: {{ .Namespace }}
 spec:
   ports:
-  - port: 8082
+  - port: {{ .Params.REST_PROXY_PORT }}
   selector:
     app: rest-proxy
   clusterIP: None
