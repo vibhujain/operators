@@ -20,6 +20,13 @@ spec:
       - name: schema-registry
         image: mesosphere/cp-schema-registry:5.3.0
         command: ["/etc/confluent/docker/run"]
+        resources:
+          requests:
+            memory: {{ .Params.MEMORY }}
+            cpu: {{ .Params.CPUS }}
+          limits:
+            memory: {{ .Params.MEM_LIMIT }}
+            cpu: {{ .Params.CPUS_LIMIT }}
         ports:
         - containerPort: 8081
           name: schema-registry

@@ -9,3 +9,15 @@ parameters:
   - name: REST_PROXY_PORT
     description: "Port on which Confluent REST PROXY will be exported"
     default: 8082
+  - name: MEMORY
+    description: Amount of memory to provide to Zookeeper pods
+    default: "256Mi"
+  - name: MEM_LIMIT
+    description: "Memory (limit) for the Zookeeper nodes pods. spec.containers[].resources.limits.memory"
+    default: "1024Mi"
+  - name: CPUS
+    description: Amount of cpu to provide to Zookeeper pods
+    default: "250m"
+  - name: CPUS_LIMIT
+    description: "CPUs (limit) for the Zookeeper nodes pods. spec.containers[].resources.limits.cpu"
+    default: "1000m"

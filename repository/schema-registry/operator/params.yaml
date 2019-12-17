@@ -3,3 +3,15 @@ parameters:
   - name: HOST_NAME
     description: "Host name used to generate absolute URLs in responses"
     default: "localhost"
+  - name: MEMORY
+    description: Amount of memory to provide to Zookeeper pods
+    default: "256Mi"
+  - name: MEM_LIMIT
+    description: "Memory (limit) for the Zookeeper nodes pods. spec.containers[].resources.limits.memory"
+    default: "1024Mi"
+  - name: CPUS
+    description: Amount of cpu to provide to Zookeeper pods
+    default: "250m"
+  - name: CPUS_LIMIT
+    description: "CPUs (limit) for the Zookeeper nodes pods. spec.containers[].resources.limits.cpu"
+    default: "1000m"
